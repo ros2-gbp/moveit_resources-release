@@ -1,3 +1,4 @@
+release_repo_url: git@github.com:moveit/moveit_resources-release.git
 tracks:
   foxy:
     actions:

@@ -1,5 +1,12 @@
-## MoveIt Resources for testing: Fanuc M-10iA.
+MoveIt Resources
+================
 
-A project-internal moveit configuration for testing in MoveIt.
+This repository includes various resources (URDFs, meshes, moveit_config packages) needed for MoveIt testing.
 
-Use ROS-Industrial's upstream files if you actually want to work with the robot!
+[![Build Status](https://travis-ci.com/ros-planning/moveit_resources.png?branch=ros2)](https://travis-ci.com/github/ros-planning/moveit_resources/branches)
+
+## Included Robots
+
+- PR2
+- Fanuc M-10iA
+- Franka Emika Panda

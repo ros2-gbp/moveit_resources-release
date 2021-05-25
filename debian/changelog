@@ -1,0 +1,33 @@
+ros-foxy-moveit-resources-panda-description (2.0.2-1focal) focal; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Sun, 23 May 2021 22:00:00 -0000
+
+ros-foxy-moveit-resources-panda-description (2.0.1-1focal) focal; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 08 Apr 2021 22:00:00 -0000
+
+ros-foxy-moveit-resources-panda-description (2.0.0-1focal) focal; urgency=high
+
+  * Port and modernize CMakeLists.txt + package.xml for ROS2 (#26 <https://github.com/ros-planning/moveit_resources/issues/26>, #31 <https://github.com/ros-planning/moveit_resources/issues/31>)
+  * Contributors: Henning Kayser, Jafar Abdi, Mike Lautman, Nathan Brooks
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 19 Nov 2020 23:00:00 -0000
+
+ros-foxy-moveit-resources-panda-description (0.7.1-1focal) focal; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 08 Oct 2020 22:00:00 -0000
+
+ros-foxy-moveit-resources-panda-description (0.7.0-1focal) focal; urgency=high
+
+  * Split resources into multiple packages (#36 <https://github.com/ros-planning/moveit_resources/issues/36>)
+  * Contributors: Robert Haschke, Michael Görner
+
+ -- Dave Coleman <dave@dav.ee>  Wed, 12 Aug 2020 22:00:00 -0000
+
+

@@ -1,0 +1,12 @@
+Source: ros-foxy-moveit-resources
+Section: misc
+Priority: optional
+Maintainer: Dave Coleman <dave@dav.ee>
+Build-Depends: debhelper (>= 9.0.0), ros-foxy-ament-cmake, ros-foxy-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-foxy-moveit-resources
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-foxy-joint-state-publisher, ros-foxy-moveit-resources-fanuc-description, ros-foxy-moveit-resources-fanuc-moveit-config, ros-foxy-moveit-resources-panda-description, ros-foxy-moveit-resources-panda-moveit-config, ros-foxy-moveit-resources-pr2-description, ros-foxy-robot-state-publisher, ros-foxy-ros-workspace
+Description: Resources used for MoveIt testing

@@ -1,0 +1,12 @@
+Source: ros-galactic-moveit-resources
+Section: misc
+Priority: optional
+Maintainer: Dave Coleman <dave@dav.ee>
+Build-Depends: debhelper (>= 9.0.0), ros-galactic-ament-cmake, ros-galactic-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-galactic-moveit-resources
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-galactic-joint-state-publisher, ros-galactic-moveit-resources-fanuc-description, ros-galactic-moveit-resources-fanuc-moveit-config, ros-galactic-moveit-resources-panda-description, ros-galactic-moveit-resources-panda-moveit-config, ros-galactic-moveit-resources-pr2-description, ros-galactic-robot-state-publisher, ros-galactic-ros-workspace
+Description: Resources used for MoveIt testing

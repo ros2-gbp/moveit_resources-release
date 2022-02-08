@@ -1,0 +1,39 @@
+ros-rolling-moveit-resources-panda-description (2.0.3-2bullseye) bullseye; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 16 Sep 2021 07:00:00 -0000
+
+ros-rolling-moveit-resources-panda-description (2.0.2-2bullseye) bullseye; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Mon, 24 May 2021 07:00:00 -0000
+
+ros-rolling-moveit-resources-panda-description (2.0.1-2bullseye) bullseye; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Fri, 09 Apr 2021 07:00:00 -0000
+
+ros-rolling-moveit-resources-panda-description (2.0.0-2bullseye) bullseye; urgency=high
+
+  * Port and modernize CMakeLists.txt + package.xml for ROS2 (#26 <https://github.com/ros-planning/moveit_resources/issues/26>, #31 <https://github.com/ros-planning/moveit_resources/issues/31>)
+  * Contributors: Henning Kayser, Jafar Abdi, Mike Lautman, Nathan Brooks
+
+ -- Dave Coleman <dave@dav.ee>  Fri, 20 Nov 2020 08:00:00 -0000
+
+ros-rolling-moveit-resources-panda-description (0.7.1-2bullseye) bullseye; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Fri, 09 Oct 2020 07:00:00 -0000
+
+ros-rolling-moveit-resources-panda-description (0.7.0-2bullseye) bullseye; urgency=high
+
+  * Split resources into multiple packages (#36 <https://github.com/ros-planning/moveit_resources/issues/36>)
+  * Contributors: Robert Haschke, Michael Görner
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 13 Aug 2020 07:00:00 -0000
+
+

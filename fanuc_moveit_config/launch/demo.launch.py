@@ -12,25 +12,20 @@ from moveit_configs_utils import MoveItConfigsBuilder
 def generate_launch_description():
 
     # Command-line arguments
-    tutorial_arg = DeclareLaunchArgument(
-        "rviz_tutorial", default_value="False", description="Tutorial flag"
-    )
-
     db_arg = DeclareLaunchArgument(
         "db", default_value="False", description="Database flag"
     )
 
     moveit_config = (
-        MoveItConfigsBuilder("moveit_resources_panda")
-        .robot_description(file_path="config/panda.urdf.xacro")
-        .robot_description_semantic(file_path="config/panda.srdf")
-        .trajectory_execution(file_path="config/gripper_moveit_controllers.yaml")
-        .planning_pipelines(pipelines=["ompl", "chomp"])
+        MoveItConfigsBuilder("moveit_resources_fanuc")
+        .robot_description(file_path="config/fanuc.urdf.xacro")
+        .robot_description_semantic(file_path="config/fanuc.srdf")
+        .trajectory_execution(file_path="config/moveit_controllers.yaml")
         .to_moveit_configs()
     )
 
     # Start the actual move_group node/action server
-    move_group_node = Node(
+    run_move_group_node = Node(
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
@@ -38,26 +33,11 @@ def generate_launch_description():
     )
 
     # RViz
-    tutorial_mode = LaunchConfiguration("rviz_tutorial")
     rviz_base = os.path.join(
-        get_package_share_directory("moveit_resources_panda_moveit_config"), "launch"
+        get_package_share_directory("moveit_resources_fanuc_moveit_config"), "launch"
     )
     rviz_full_config = os.path.join(rviz_base, "moveit.rviz")
-    rviz_empty_config = os.path.join(rviz_base, "moveit_empty.rviz")
-    rviz_node_tutorial = Node(
-        package="rviz2",
-        executable="rviz2",
-        name="rviz2",
-        output="log",
-        arguments=["-d", rviz_empty_config],
-        parameters=[
-            moveit_config.robot_description,
-            moveit_config.robot_description_semantic,
-            moveit_config.planning_pipelines,
-            moveit_config.robot_description_kinematics,
-        ],
-        condition=IfCondition(tutorial_mode),
-    )
+
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
@@ -70,16 +50,15 @@ def generate_launch_description():
             moveit_config.planning_pipelines,
             moveit_config.robot_description_kinematics,
         ],
-        condition=UnlessCondition(tutorial_mode),
     )
 
     # Static TF
-    static_tf_node = Node(
+    static_tf = Node(
         package="tf2_ros",
         executable="static_transform_publisher",
         name="static_transform_publisher",
         output="log",
-        arguments=["0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "world", "panda_link0"],
+        arguments=["0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "world", "base_link"],
     )
 
     # Publish TF
@@ -93,7 +72,7 @@ def generate_launch_description():
 
     # ros2_control using FakeSystem as hardware
     ros2_controllers_path = os.path.join(
-        get_package_share_directory("moveit_resources_panda_moveit_config"),
+        get_package_share_directory("moveit_resources_fanuc_moveit_config"),
         "config",
         "ros2_controllers.yaml",
     )
@@ -101,16 +80,12 @@ def generate_launch_description():
         package="controller_manager",
         executable="ros2_control_node",
         parameters=[moveit_config.robot_description, ros2_controllers_path],
-        output="screen",
+        output="both",
     )
 
     # Load controllers
     load_controllers = []
-    for controller in [
-        "panda_arm_controller",
-        "panda_hand_controller",
-        "joint_state_broadcaster",
-    ]:
+    for controller in ["fanuc_controller", "joint_state_broadcaster"]:
         load_controllers += [
             ExecuteProcess(
                 cmd=["ros2 run controller_manager spawner {}".format(controller)],
@@ -135,13 +110,11 @@ def generate_launch_description():
 
     return LaunchDescription(
         [
-            tutorial_arg,
             db_arg,
             rviz_node,
-            rviz_node_tutorial,
-            static_tf_node,
+            static_tf,
             robot_state_publisher,
-            move_group_node,
+            run_move_group_node,
             ros2_control_node,
             mongodb_server_node,
         ]

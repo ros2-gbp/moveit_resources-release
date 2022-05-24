@@ -1,4 +1,4 @@
-release_repo_url: git@github.com:moveit/moveit_resources-release.git
+release_repo_url: https://github.com/ros2-gbp/moveit_resources-release
 tracks:
   foxy:
     actions:

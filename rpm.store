@@ -1,1 +1,1 @@
-{"trim": "", "base": "2339800", "trimbase": "", "parent": "rpm/rolling/moveit_resources_fanuc_moveit_config", "previous": "a274e96"}
+{"base": "a0439ad", "parent": "rpm/rolling/moveit_resources_fanuc_moveit_config", "previous": "c519d9c", "trim": "", "trimbase": ""}

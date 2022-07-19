@@ -1,1 +1,1 @@
-{"trim": "", "base": "c10fd64", "trimbase": "", "parent": "debian/rolling/moveit_resources_fanuc_description", "previous": "e478b0b"}
+{"base": "92e3560", "parent": "debian/rolling/moveit_resources_fanuc_description", "previous": "735d21d", "trim": "", "trimbase": ""}

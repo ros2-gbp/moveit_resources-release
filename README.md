@@ -1,16 +1,8 @@
-MoveIt Resources
-================
+# Benchmarking
 
-This repository includes various resources (URDFs, meshes, moveit_config packages) needed for MoveIt testing.
+The databases contained in this package are generated from the datasets provided by KavrakiLab's [MotionBenchMaker](https://github.com/KavrakiLab/motion_bench_maker) with [yaml_to_warehouse](https://github.com/mamoll/yaml_to_warehouse).
 
-GitHub Actions: [![Formatting (pre-commit))](https://github.com/ros-planning/moveit_resources/actions/workflows/format.yml/badge.svg?branch=ros2)](https://github.com/ros-planning/moveit_resources/actions/workflows/format.yml?query=branch%3Aros2) [![Build and Test](https://github.com/ros-planning/moveit_resources/actions/workflows/industrial_ci_action.yml/badge.svg?branch=ros2)](https://github.com/ros-planning/moveit_resources/actions/workflows/industrial_ci_action.yml?query=branch%3Aros2)
+Currently two benchmark databases are available:
 
-## Included Robots
-
-- PR2
-- Fanuc M-10iA
-- Franka Emika Panda
-
-## Notes
-
-Please install [git lfs](https://git-lfs.com/) by running `git lfs install` if you plan to use the sqlite test databases.
+1. panda_kitchen_test_db.sqlite: 10 queries in the MotionBenchMaker's kitchen environment with different difficulties
+2. panda_test_db.sqlite: Full dataset of different environments and difficult planning problems for the Panda robot

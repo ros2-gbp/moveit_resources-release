@@ -1,3 +1,33 @@
+## moveit_resources (rolling) - 2.1.1-1
+
+The packages in the `moveit_resources` repository were released into the `rolling` distro by running `/home/tyler/.local/bin/bloom-release --rosdistro rolling moveit_resources` on `Thu, 18 May 2023 23:12:05 -0000`
+
+These packages were released:
+- `dual_arm_panda_moveit_config`
+- `moveit_resources`
+- `moveit_resources_fanuc_description`
+- `moveit_resources_fanuc_moveit_config`
+- `moveit_resources_panda_description`
+- `moveit_resources_panda_moveit_config`
+- `moveit_resources_pr2_description`
+
+Version of package(s) in repository `moveit_resources`:
+
+- upstream repository: https://github.com/ros-planning/moveit_resources.git
+- release repository: https://github.com/ros2-gbp/moveit_resources-release.git
+- rosdistro version: `2.0.6-2`
+- old version: `2.1.0-1`
+- new version: `2.1.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## moveit_resources (iron) - 2.1.1-1
 
 The packages in the `moveit_resources` repository were released into the `iron` distro by running `/home/tyler/.local/bin/bloom-release --rosdistro iron moveit_resources` on `Thu, 18 May 2023 23:02:45 -0000`

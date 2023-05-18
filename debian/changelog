@@ -1,0 +1,10 @@
+ros-iron-dual-arm-panda-moveit-config (2.1.0-1bullseye) bullseye; urgency=high
+
+  * Remove comments from scalars (#169 <https://github.com/ros-planning/moveit_resources/issues/169>)
+  * Update information about Ruckig and jerk limits (#168 <https://github.com/ros-planning/moveit_resources/issues/168>)
+  * Add dual arm panda config package from moveit2_tutorials (#164 <https://github.com/ros-planning/moveit_resources/issues/164>)
+  * Contributors: AndyZe, Sebastian Castro, Stephanie Eng
+
+ -- Mike Lautman <mike@picknik.ai>  Thu, 18 May 2023 06:00:00 -0000
+
+

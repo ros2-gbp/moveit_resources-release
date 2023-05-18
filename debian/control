@@ -1,0 +1,12 @@
+Source: ros-iron-moveit-resources-panda-moveit-config
+Section: misc
+Priority: optional
+Maintainer: Mike Lautman <mike@picknik.ai>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ament-cmake, ros-iron-ros-workspace
+Homepage: http://moveit.ros.org/
+Standards-Version: 3.9.2
+
+Package: ros-iron-moveit-resources-panda-moveit-config
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-iron-joint-state-publisher, ros-iron-joint-state-publisher-gui, ros-iron-moveit-resources-panda-description, ros-iron-robot-state-publisher, ros-iron-xacro, ros-iron-ros-workspace
+Description: MoveIt Resources for testing: Franka Emika Panda A project-internal configuration for testing in MoveIt.

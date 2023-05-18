@@ -1,0 +1,9 @@
+ros-rolling-moveit-resources-benchmarking (2.1.0-1bullseye) bullseye; urgency=high
+
+  * Enable AnytimePathShortening and fix benchmarks (#167 <https://github.com/ros-planning/moveit_resources/issues/167>)
+  * Add benchmark data package (#162 <https://github.com/ros-planning/moveit_resources/issues/162>)
+  * Contributors: Sebastian Jahr
+
+ -- MoveIt Release Team <moveit_releasers@googlegroups.com>  Thu, 18 May 2023 06:00:00 -0000
+
+

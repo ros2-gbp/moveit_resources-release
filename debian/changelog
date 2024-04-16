@@ -1,0 +1,77 @@
+ros-humble-moveit-resources-fanuc-moveit-config (2.0.7-1jammy) jammy; urgency=high
+
+  * Update ros2 control usage (#192 <https://github.com/ros-planning/moveit_resources/issues/192>) (#193 <https://github.com/ros-planning/moveit_resources/issues/193>)
+  * Add execution_duration_monitoring param to the example config (#160 <https://github.com/ros-planning/moveit_resources/issues/160>)
+  * Contributors: AndyZe, Sebastian Jahr
+
+ -- Dave Coleman <dave@dav.ee>  Tue, 02 Apr 2024 22:00:00 -0000
+
+ros-humble-moveit-resources-fanuc-moveit-config (2.0.6-1jammy) jammy; urgency=high
+
+  * fake_components -> mock_components (#147 <https://github.com/ros-planning/moveit_resources/issues/147>)
+  * Rename cartesian_limits.yaml (#146 <https://github.com/ros-planning/moveit_resources/issues/146>)
+  * Contributors: AndyZe, Tyler Weaver
+
+ -- Dave Coleman <dave@dav.ee>  Sun, 17 Jul 2022 22:00:00 -0000
+
+ros-humble-moveit-resources-fanuc-moveit-config (2.0.5-1jammy) jammy; urgency=high
+
+  * Fix a typo in chomp_planning.yaml (#143 <https://github.com/ros-planning/moveit_resources/issues/143>)
+  * Update ros2_control launching (#140 <https://github.com/ros-planning/moveit_resources/issues/140>)
+  * Remove invalid sensor config (#141 <https://github.com/ros-planning/moveit_resources/issues/141>)
+  * Contributors: AndyZe, David V. Lu!!, Stephanie Eng
+
+ -- Dave Coleman <dave@dav.ee>  Fri, 24 Jun 2022 22:00:00 -0000
+
+ros-humble-moveit-resources-fanuc-moveit-config (2.0.4-1jammy) jammy; urgency=high
+
+  * Update FANUC launch file and cleanup of deprecated XML files (#120 <https://github.com/ros-planning/moveit_resources/issues/120>)
+  * Delete deprecated Panda config and launch files (#98 <https://github.com/ros-planning/moveit_resources/issues/98>)
+  * Update yaml parameters for moveit_configs_utils (#108 <https://github.com/ros-planning/moveit_resources/issues/108>)
+  * Port PRBT packages for PILZ planner tests (#101 <https://github.com/ros-planning/moveit_resources/issues/101>)
+  * Adding RPBT config (#43 <https://github.com/ros-planning/moveit_resources/issues/43>)
+  * Contributors: AndyZe, Christian Henkel, Henning Kayser, Jafar Abdi, Sebastian Jahr, Stephanie Eng
+
+ -- Dave Coleman <dave@dav.ee>  Wed, 18 May 2022 22:00:00 -0000
+
+ros-humble-moveit-resources-fanuc-moveit-config (2.0.3-1jammy) jammy; urgency=high
+
+  * Migrate to joint state broadcaster
+  * Contributors: Vatan Aksoy Tezer
+
+ -- Dave Coleman <dave@dav.ee>  Wed, 15 Sep 2021 22:00:00 -0000
+
+ros-humble-moveit-resources-fanuc-moveit-config (2.0.2-1jammy) jammy; urgency=high
+
+  * Remove move group prefixes from rviz configs (#62 <https://github.com/ros-planning/moveit_resources/issues/62>)
+  * Contributors: Vatan Aksoy Tezer
+
+ -- Dave Coleman <dave@dav.ee>  Sun, 23 May 2021 22:00:00 -0000
+
+ros-humble-moveit-resources-fanuc-moveit-config (2.0.1-1jammy) jammy; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 08 Apr 2021 22:00:00 -0000
+
+ros-humble-moveit-resources-fanuc-moveit-config (2.0.0-1jammy) jammy; urgency=high
+
+  * Port and modernize CMakeLists.txt + package.xml for ROS2 (#26 <https://github.com/ros-planning/moveit_resources/issues/26>, #31 <https://github.com/ros-planning/moveit_resources/issues/31>)
+  * Contributors: Henning Kayser, Jafar Abdi, Mike Lautman, Nathan Brooks
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 19 Nov 2020 23:00:00 -0000
+
+ros-humble-moveit-resources-fanuc-moveit-config (0.7.1-1jammy) jammy; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 08 Oct 2020 22:00:00 -0000
+
+ros-humble-moveit-resources-fanuc-moveit-config (0.7.0-1jammy) jammy; urgency=high
+
+  * Split resources into multiple packages (#36 <https://github.com/ros-planning/moveit_resources/issues/36>)
+  * Contributors: Robert Haschke, Michael Görner
+
+ -- Dave Coleman <dave@dav.ee>  Wed, 12 Aug 2020 22:00:00 -0000
+
+

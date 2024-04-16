@@ -1,10 +1,10 @@
 import os
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
-from launch.conditions import IfCondition
+from launch.substitutions import LaunchConfiguration
+from launch.conditions import IfCondition, UnlessCondition
 from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare
+from launch.actions import ExecuteProcess
 from ament_index_python.packages import get_package_share_directory
 from moveit_configs_utils import MoveItConfigsBuilder
 
@@ -12,10 +12,8 @@ from moveit_configs_utils import MoveItConfigsBuilder
 def generate_launch_description():
 
     # Command-line arguments
-    rviz_config_arg = DeclareLaunchArgument(
-        "rviz_config",
-        default_value="moveit.rviz",
-        description="RViz configuration file",
+    tutorial_arg = DeclareLaunchArgument(
+        "rviz_tutorial", default_value="False", description="Tutorial flag"
     )
 
     db_arg = DeclareLaunchArgument(
@@ -25,7 +23,7 @@ def generate_launch_description():
     ros2_control_hardware_type = DeclareLaunchArgument(
         "ros2_control_hardware_type",
         default_value="mock_components",
-        description="ROS 2 control hardware interface type to use for the launch file -- possible values: [mock_components, isaac]",
+        description="ROS2 control hardware interface type to use for the launch file -- possible values: [mock_components, isaac]",
     )
 
     moveit_config = (
@@ -39,12 +37,9 @@ def generate_launch_description():
             },
         )
         .robot_description_semantic(file_path="config/panda.srdf")
-        .planning_scene_monitor(
-            publish_robot_description=True, publish_robot_description_semantic=True
-        )
         .trajectory_execution(file_path="config/gripper_moveit_controllers.yaml")
         .planning_pipelines(
-            pipelines=["ompl", "chomp", "pilz_industrial_motion_planner", "stomp"]
+            pipelines=["ompl", "chomp", "pilz_industrial_motion_planner"]
         )
         .to_moveit_configs()
     )
@@ -59,23 +54,39 @@ def generate_launch_description():
     )
 
     # RViz
-    rviz_base = LaunchConfiguration("rviz_config")
-    rviz_config = PathJoinSubstitution(
-        [FindPackageShare("moveit_resources_panda_moveit_config"), "launch", rviz_base]
+    tutorial_mode = LaunchConfiguration("rviz_tutorial")
+    rviz_base = os.path.join(
+        get_package_share_directory("moveit_resources_panda_moveit_config"), "launch"
+    )
+    rviz_full_config = os.path.join(rviz_base, "moveit.rviz")
+    rviz_empty_config = os.path.join(rviz_base, "moveit_empty.rviz")
+    rviz_node_tutorial = Node(
+        package="rviz2",
+        executable="rviz2",
+        name="rviz2",
+        output="log",
+        arguments=["-d", rviz_empty_config],
+        parameters=[
+            moveit_config.robot_description,
+            moveit_config.robot_description_semantic,
+            moveit_config.planning_pipelines,
+            moveit_config.robot_description_kinematics,
+        ],
+        condition=IfCondition(tutorial_mode),
     )
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
         name="rviz2",
         output="log",
-        arguments=["-d", rviz_config],
+        arguments=["-d", rviz_full_config],
         parameters=[
             moveit_config.robot_description,
             moveit_config.robot_description_semantic,
             moveit_config.planning_pipelines,
             moveit_config.robot_description_kinematics,
-            moveit_config.joint_limits,
         ],
+        condition=UnlessCondition(tutorial_mode),
     )
 
     # Static TF
@@ -150,10 +161,11 @@ def generate_launch_description():
 
     return LaunchDescription(
         [
-            rviz_config_arg,
+            tutorial_arg,
             db_arg,
             ros2_control_hardware_type,
             rviz_node,
+            rviz_node_tutorial,
             static_tf_node,
             robot_state_publisher,
             move_group_node,

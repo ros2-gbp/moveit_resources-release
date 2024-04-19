@@ -1,1 +1,1 @@
-{"base": "27f7640", "parent": "debian/rolling/moveit_resources", "previous": "c424632", "trim": "", "trimbase": ""}
+{"base": "103abff", "parent": "debian/jazzy/moveit_resources", "previous": "91fc644", "trim": "", "trimbase": ""}

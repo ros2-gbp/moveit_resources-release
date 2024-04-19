@@ -1,0 +1,12 @@
+Source: ros-jazzy-dual-arm-panda-moveit-config
+Section: misc
+Priority: optional
+Maintainer: Mike Lautman <mike@picknik.ai>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ros-workspace
+Homepage: http://moveit.ros.org/
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-dual-arm-panda-moveit-config
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-joint-state-publisher, ros-jazzy-joint-state-publisher-gui, ros-jazzy-moveit-resources-panda-description, ros-jazzy-robot-state-publisher, ros-jazzy-topic-tools, ros-jazzy-xacro, ros-jazzy-ros-workspace
+Description: Dual Franka Emika Panda MoveIt Configuration

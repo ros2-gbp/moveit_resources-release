@@ -1,0 +1,12 @@
+Source: ros-jazzy-moveit-resources-fanuc-description
+Section: misc
+Priority: optional
+Maintainer: Dave Coleman <dave@dav.ee>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-moveit-resources-fanuc-description
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-ros-workspace
+Description: Fanuc Resources used for MoveIt testing

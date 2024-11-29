@@ -1,0 +1,12 @@
+Source: ros-jazzy-moveit-resources
+Section: misc
+Priority: optional
+Maintainer: MoveIt Release Team <moveit_releasers@googlegroups.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-moveit-resources
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-joint-state-publisher, ros-jazzy-moveit-resources-fanuc-description, ros-jazzy-moveit-resources-fanuc-moveit-config, ros-jazzy-moveit-resources-panda-description, ros-jazzy-moveit-resources-panda-moveit-config, ros-jazzy-moveit-resources-pr2-description, ros-jazzy-robot-state-publisher, ros-jazzy-ros-workspace
+Description: Resources used for MoveIt testing

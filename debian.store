@@ -1,1 +1,1 @@
-{"base": "4fef95f", "parent": "debian/rolling/dual_arm_panda_moveit_config", "previous": "2d381d8", "trim": "", "trimbase": ""}
+{"base": "b62ab1f40da8", "parent": "debian/kilted/dual_arm_panda_moveit_config", "previous": "a7793b36e433", "trim": "", "trimbase": ""}

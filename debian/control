@@ -1,0 +1,13 @@
+Source: ros-kilted-moveit-resources-fanuc-moveit-config
+Section: misc
+Priority: optional
+Maintainer: Dave Coleman <dave@dav.ee>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake, ros-kilted-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-kilted-moveit-resources-fanuc-moveit-config
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-controller-manager, ros-kilted-joint-state-publisher, ros-kilted-moveit-resources-fanuc-description, ros-kilted-position-controllers, ros-kilted-robot-state-publisher, ros-kilted-ros2cli-common-extensions, ros-kilted-tf2-ros, ros-kilted-xacro, ros-kilted-ros-workspace
+Description: MoveIt Resources for testing: Fanuc M-10iA.
+ A project-internal configuration for testing in MoveIt.

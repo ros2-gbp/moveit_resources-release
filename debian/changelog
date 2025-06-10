@@ -1,0 +1,87 @@
+ros-rolling-moveit-resources-fanuc-description (3.1.1-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Mon, 09 Jun 2025 22:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (3.1.0-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 28 Nov 2024 23:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (3.0.0-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Sun, 18 Feb 2024 23:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (2.1.1-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Wed, 17 May 2023 22:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (2.1.0-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Wed, 17 May 2023 22:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (2.0.6-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Sun, 17 Jul 2022 22:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (2.0.5-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Fri, 24 Jun 2022 22:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (2.0.4-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Wed, 18 May 2022 22:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (2.0.3-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Wed, 15 Sep 2021 22:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (2.0.2-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Sun, 23 May 2021 22:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (2.0.1-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 08 Apr 2021 22:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (2.0.0-1noble) noble; urgency=high
+
+  * Port and modernize CMakeLists.txt + package.xml for ROS2 (#26 <https://github.com/ros-planning/moveit_resources/issues/26>, #31 <https://github.com/ros-planning/moveit_resources/issues/31>)
+  * Contributors: Henning Kayser, Jafar Abdi, Mike Lautman, Nathan Brooks
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 19 Nov 2020 23:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (0.7.1-1noble) noble; urgency=high
+
+
+
+ -- Dave Coleman <dave@dav.ee>  Thu, 08 Oct 2020 22:00:00 -0000
+
+ros-rolling-moveit-resources-fanuc-description (0.7.0-1noble) noble; urgency=high
+
+  * Split resources into multiple packages (#36 <https://github.com/ros-planning/moveit_resources/issues/36>)
+  * Contributors: Robert Haschke, Michael Görner
+
+ -- Dave Coleman <dave@dav.ee>  Wed, 12 Aug 2020 22:00:00 -0000
+
+

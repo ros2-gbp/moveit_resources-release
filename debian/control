@@ -1,0 +1,12 @@
+Source: ros-lyrical-moveit-resources-panda-moveit-config
+Section: misc
+Priority: optional
+Maintainer: Mike Lautman <mike@picknik.ai>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ros-workspace
+Homepage: http://moveit.ros.org/
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-moveit-resources-panda-moveit-config
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-controller-manager, ros-lyrical-joint-state-publisher, ros-lyrical-joint-state-publisher-gui, ros-lyrical-moveit-resources-panda-description, ros-lyrical-position-controllers, ros-lyrical-robot-state-publisher, ros-lyrical-ros2cli-common-extensions, ros-lyrical-topic-tools, ros-lyrical-xacro, ros-lyrical-ros-workspace
+Description: MoveIt Resources for testing: Franka Emika Panda A project-internal configuration for testing in MoveIt.

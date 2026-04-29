@@ -1,0 +1,12 @@
+Source: ros-lyrical-dual-arm-panda-moveit-config
+Section: misc
+Priority: optional
+Maintainer: Mike Lautman <mike@picknik.ai>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ros-workspace
+Homepage: http://moveit.ros.org/
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-dual-arm-panda-moveit-config
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-joint-state-publisher, ros-lyrical-joint-state-publisher-gui, ros-lyrical-moveit-resources-panda-description, ros-lyrical-robot-state-publisher, ros-lyrical-topic-tools, ros-lyrical-xacro, ros-lyrical-ros-workspace
+Description: Dual Franka Emika Panda MoveIt Configuration

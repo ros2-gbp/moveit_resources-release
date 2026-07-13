@@ -1,1 +1,1 @@
-{"base": "3a757bdb0dba", "parent": "debian/rolling/moveit_resources_panda_description", "previous": "d00c56c34cee", "trim": "", "trimbase": ""}
+{"base": "5bc75548", "parent": "debian/rolling/moveit_resources_panda_description", "previous": "eb8835ac", "trim": "", "trimbase": ""}

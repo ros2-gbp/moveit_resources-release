@@ -1,9 +1,16 @@
-# panda_description
+MoveIt Resources
+================
 
-> Note: This package contains a panda.urdf and a newer panda.urdf.xacro.
-> The XACRO has been created to support finding package resource files dynamically which is needed for Gazebo.
-> The URDF is still needed by [RobotModelTestUtils](https://github.com/ros-planning/moveit2/blob/main/moveit_core/utils/src/robot_model_test_utils.cpp#L75) which doesn't support xacro yet.
+This repository includes various resources (URDFs, meshes, moveit_config packages) needed for MoveIt testing.
 
-The URDF model and meshes contained in this package were copied from the frankaemika `franka_ros` package and adapted for use with `moveit_resources`.
+GitHub Actions: [![Formatting (pre-commit))](https://github.com/ros-planning/moveit_resources/actions/workflows/format.yml/badge.svg?branch=ros2)](https://github.com/ros-planning/moveit_resources/actions/workflows/format.yml?query=branch%3Aros2) [![Build and Test](https://github.com/ros-planning/moveit_resources/actions/workflows/industrial_ci_action.yml/badge.svg?branch=ros2)](https://github.com/ros-planning/moveit_resources/actions/workflows/industrial_ci_action.yml?query=branch%3Aros2)
 
-All imported files were released under the Apache-2.0 license.
+## Included Robots
+
+- PR2
+- Fanuc M-10iA
+- Franka Emika Panda
+
+## Notes
+
+The benchmarking resources have been moved to https://github.com/ros-planning/moveit_benchmark_resources.
